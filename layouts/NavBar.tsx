@@ -1,3 +1,5 @@
+'use client'
+
 import { AppBar, Box, Fab, styled, Toolbar } from '@mui/material';
 import Container from '@mui/material/Container';
 import AddIcon from '@mui/icons-material/Add';

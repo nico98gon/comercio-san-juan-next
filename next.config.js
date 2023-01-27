@@ -5,4 +5,7 @@ const nextConfig = {
   },
 }
 
+// const withBabelExclude = require('next-plugin-babel-exclude')
+// module.exports = withBabelExclude(['path/to/library'])
+
 module.exports = nextConfig
