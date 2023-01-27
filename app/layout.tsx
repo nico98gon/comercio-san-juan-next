@@ -1,4 +1,3 @@
-// import styled from "@emotion/styled";
 import { Box } from "@mui/system";
 import { NavBar } from "layouts/NavBar";
 
@@ -15,39 +14,41 @@ export default function RootLayout({
   return (
     <Box sx={{ display: "flex" }}>
 
-            <NavBar />
+      {/* <NavBar /> */}
 
-            {/* <SideBar drawerWidth={ drawerWidth }/> */}
+      Hola
 
-            {/* <SideBar drawerWidth={ drawerWidth }/>
+      {/* <SideBar drawerWidth={ drawerWidth }/> */}
 
-            {/* <Box 
-                sx={{ position: { xs: 'fixed', md: 'absolute'}, zIndex: '2', top: {xs: '1%', md: '8vh'}, transform: 'translate( -50%, 5% )', right: { xs: '2%', md: '49%'}}}
-            >
-                <ThemeButton />
-            </Box> */}
+      {/* <SideBar drawerWidth={ drawerWidth }/>
 
-            {/* <CustomBox
-                position="fixed"
-                zIndex={5}
-                backgroundColor="primary"
-                display={{ xs: 'none', md:'block' }}
-                sx={{ top: 96, width: '78%', height: 65, left: '50%', transform: 'translate( -50%, -50% )' }}
-            >
-                <CategoriesAndFavoritesButtons />
-            </CustomBox>
+      {/* <Box 
+          sx={{ position: { xs: 'fixed', md: 'absolute'}, zIndex: '2', top: {xs: '1%', md: '8vh'}, transform: 'translate( -50%, 5% )', right: { xs: '2%', md: '49%'}}}
+      >
+          <ThemeButton />
+      </Box> */}
 
-            <Box
-                component='main'
-                sx={{ p: 3, mt: { xs: 0, md: 9 }, ml: { xs: "14%", md: `${drawerWidth}px` }, mr: { xs: 0, xl: `${drawerWidth}px` }}}
-            >
+      {/* <CustomBox
+          position="fixed"
+          zIndex={5}
+          backgroundColor="primary"
+          display={{ xs: 'none', md:'block' }}
+          sx={{ top: 96, width: '78%', height: 65, left: '50%', transform: 'translate( -50%, -50% )' }}
+      >
+          <CategoriesAndFavoritesButtons />
+      </CustomBox>
 
-                { children }
+      <Box
+          component='main'
+          sx={{ p: 3, mt: { xs: 0, md: 9 }, ml: { xs: "14%", md: `${drawerWidth}px` }, mr: { xs: 0, xl: `${drawerWidth}px` }}}
+      >
 
-            </Box>
+          { children }
 
-            <FavoritesBar drawerWidth={ drawerWidth }/> */}
+      </Box>
 
-        </Box>
+      <FavoritesBar drawerWidth={ drawerWidth }/> */}
+
+    </Box>
   )
 }
