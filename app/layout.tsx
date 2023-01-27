@@ -1,3 +1,5 @@
+'use client'
+
 import { Box } from "@mui/system";
 import { NavBar } from "layouts/NavBar";
 
@@ -14,9 +16,7 @@ export default function RootLayout({
   return (
     <Box sx={{ display: "flex" }}>
 
-      {/* <NavBar /> */}
-
-      Hola
+      <NavBar />
 
       {/* <SideBar drawerWidth={ drawerWidth }/> */}
 

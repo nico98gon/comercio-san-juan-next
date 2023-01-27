@@ -9,19 +9,23 @@ export const PagesButtons = () => {
 
     return (
         <>
-            <button className="cta" onClick={ handleCloseNavMenu }>
+            {/* <button className="cta" onClick={ handleCloseNavMenu }> */}
+            <button className="cta">
                 <span className="hover-underline-animation"> Inicio </span>
             </button>
 
-            <button className="cta" onClick={ handleCloseNavMenu }>
+            {/* <button className="cta" onClick={ handleCloseNavMenu }> */}
+            <button className="cta">
                 <span className="hover-underline-animation"> Tiendas Online </span>
             </button>
 
-            <button className="cta" onClick={ handleCloseNavMenu }>
+            {/* <button className="cta" onClick={ handleCloseNavMenu }> */}
+            <button className="cta">
                 <span className="hover-underline-animation"> Productos </span>
             </button>
 
-            <button className="cta" onClick={ handleCloseNavMenu }>
+            {/* <button className="cta" onClick={ handleCloseNavMenu }> */}
+            <button className="cta">
                 <span className="hover-underline-animation"> Servicios </span>
             </button>
         </>

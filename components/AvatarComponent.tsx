@@ -13,7 +13,8 @@ export const AvatarComponent = () => {
     return (
         <>
             <Tooltip title="Open settings">
-                <IconButton onClick={ handleOpenUserMenu } sx={{ p: 0 }} >
+                {/* <IconButton onClick={ handleOpenUserMenu } sx={{ p: 0 }} > */}
+                <IconButton sx={{ p: 0 }} >
                     <Avatar 
                     alt="Remy Sharp" 
                     src="/static/images/avatar/3.jpg"
@@ -29,7 +30,7 @@ export const AvatarComponent = () => {
             <Menu
                 sx={{ mt: '45px' }}
                 id="menu-appbar"
-                anchorEl={anchorElUser}
+                // anchorEl={anchorElUser}
                 anchorOrigin={{
                     vertical: 'top',
                     horizontal: 'right',
@@ -39,11 +40,12 @@ export const AvatarComponent = () => {
                     vertical: 'top',
                     horizontal: 'right',
                 }}
-                open={ Boolean(anchorElUser) }
-                onClose={ handleCloseUserMenu }
+                // open={ Boolean(anchorElUser) }
+                // onClose={ handleCloseUserMenu }
                 >
                 {settings.map((setting) => (
-                    <MenuItem key={ setting } onClick={ handleCloseUserMenu }>
+                    // <MenuItem key={ setting } onClick={ handleCloseUserMenu }>
+                    <MenuItem key={ setting }>
                         <Typography textAlign="center">{setting}</Typography>
                     </MenuItem>
                 ))}

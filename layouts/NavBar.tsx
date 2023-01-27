@@ -6,11 +6,12 @@ import { Comercio } from 'components/Comercio';
 import { PagesButtons } from 'components/PagesButtons';
 import { Search } from 'components/Search';
 import { AvatarComponent } from 'components/AvatarComponent';
+import Image from 'next/image';
 
 // import { ThemeButton } from "../../helpers";
 
 const StyledBarDesktop = styled(AppBar)({
-    display: { xs: 'none', md: 'flex' }, 
+    display: { xs: 'none', md: 'flex' },
     textAlign: 'center', 
 });
 
@@ -46,7 +47,7 @@ export const NavBar = () => {
                 <Container maxWidth="x1">
                     <Toolbar disableGutters>
 
-                        <img src="src/assets/img/grapeLogo2.jpg" alt="Logo" width="55" />
+                        <Image src="src/assets/img/grapeLogo2.jpg" alt="Logo" width="55" />
 
                         <Comercio />
 
