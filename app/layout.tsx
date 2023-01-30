@@ -1,5 +1,6 @@
 'use client'
 
+import './global.css';
 import { Box } from "@mui/system";
 import { NavBar } from "layouts/NavBar";
 

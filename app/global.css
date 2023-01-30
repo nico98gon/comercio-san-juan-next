@@ -1,0 +1,270 @@
+body {
+  background-color: #dedede;
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+/* === removing default button style ===*/
+.buttonSweep {
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  border: none;
+  height: 40px;
+}
+
+.buttonSweep {
+  --border-right: 6px;
+  --text-stroke-color: #d1d1d1;
+  --animation-color: #BAF700;
+  --fs-size: 120%;
+  letter-spacing: 0.12rem;
+  text-decoration: none;
+  line-height: 1;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: lowercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 2px var(--animation-color);
+}
+
+.buttonSweep:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 20px var(--animation-color))
+}
+
+.buttonSweep:active {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+/* From uiverse.io by @alexmaracinaru */
+.cta {
+  border: none;
+  background: none;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  /* text-transform: uppercase; */
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: #d1d1d1;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d1d1d1;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.cta:active {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+/* ScrollBar */
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 12px #424242;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #141414;
+  border-radius: 8px;
+}
+
+/* ScrollBarCategories */
+
+.categorieList::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.categorieList::-webkit-scrollbar-thumb {
+  background-color: #141414;
+  border-radius: 6px;
+}
+
+/* From uiverse.io by @Ali-Tahmazi99 BURGER MENU */
+input[type = "checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+.bar {
+  position: relative;
+  cursor: pointer;
+  width: 25px;
+  height: 24px;
+}
+
+.bar span {
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #f1faee;
+  border-radius: 100px;
+  display: inline-block;
+  transition: 0.3s ease;
+  left: 0;
+}
+
+.bar span.top {
+  top: 0;
+}
+
+.bar span.middle {
+  top: 10px;
+}
+
+.bar span.bottom {
+  bottom: 0;
+}
+
+input[type]:checked ~ span.top {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 30px;
+  left: 3px;
+}
+
+input[type]:checked ~ span.bottom {
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  width: 29px;
+  bottom: -1px;
+  box-shadow: 0 0 10px #495057;
+}
+
+input[type]:checked ~ span.middle {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+
+/* From uiverse.io by @mobinkakei LOADING */
+.wrapper {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 .5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+  0% {
+      top: 60px;
+      height: 5px;
+      border-radius: 50px 50px 25px 25px;
+      transform: scaleX(1.7);
+  }
+
+  40% {
+      height: 20px;
+      border-radius: 50%;
+      transform: scaleX(1);
+  }
+
+  100% {
+      top: 0%;
+  }
+}
+
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: .2s;
+}
+
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow046 .5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+      transform: scaleX(1.5);
+  }
+
+  40% {
+      transform: scaleX(1);
+      opacity: .7;
+  }
+
+  100% {
+      transform: scaleX(.2);
+      opacity: .4;
+  }
+}
+
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: .2s
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}

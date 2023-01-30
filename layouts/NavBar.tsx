@@ -7,13 +7,9 @@ import { PagesButtons } from 'components/PagesButtons';
 import { Search } from 'components/Search';
 import { AvatarComponent } from 'components/AvatarComponent';
 import Image from 'next/image';
+import logoImage from 'assets/img/grapeLogo2.jpg';
 
 // import { ThemeButton } from "../../helpers";
-
-const StyledBarDesktop = styled(AppBar)({
-    display: { xs: 'none', md: 'flex' },
-    textAlign: 'center', 
-});
 
 // const StyledBarMobile = styled(AppBar)({
 //     width: '98%',
@@ -39,15 +35,20 @@ export const NavBar = () => {
 
     return (
         <>
-            <StyledBarDesktop
+            <AppBar
                 position="fixed"
                 enableColorOnDark
-                sx={{ background: "#141414" }}
+                sx={{ background: "#141414", display: { xs: 'none', md: 'flex', textAlign: 'center' }}}
             >
-                <Container maxWidth="x1">
+                <Container maxWidth="xl">
                     <Toolbar disableGutters>
 
-                        <Image src="src/assets/img/grapeLogo2.jpg" alt="Logo" width="55" />
+                        <Image 
+                            src={logoImage}
+                            width={55}
+                            height={55}
+                            alt="Logo Comercio San Juan"
+                        />
 
                         <Comercio />
 
@@ -76,7 +77,7 @@ export const NavBar = () => {
                         </Box>
                     </Toolbar>
                 </Container>
-            </StyledBarDesktop>
+            </AppBar>
 
             {/* <StyledBarMobile 
                 position="fixed"
