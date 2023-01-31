@@ -10,6 +10,7 @@ import { Search } from 'components/Search';
 import { AvatarComponent } from 'components/AvatarComponent';
 import Image from 'next/image';
 import logoImage from 'assets/img/grapeLogo2.jpg';
+import Link from 'next/link';
 
 // import { ThemeButton } from "../../helpers";
 
@@ -45,12 +46,14 @@ export const NavBar = () => {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
 
-                        <Image 
+                    <Link href="/">
+                        <Image
                             src={logoImage}
                             width={55}
                             height={55}
                             alt="Logo Comercio San Juan"
                         />
+                    </Link>
 
                         <Comercio />
 

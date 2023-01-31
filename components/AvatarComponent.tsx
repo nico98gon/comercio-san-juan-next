@@ -17,7 +17,7 @@ export const AvatarComponent = () => {
                 <IconButton sx={{ p: 0 }} >
                     <Avatar 
                     alt="Remy Sharp" 
-                    src="/static/images/avatar/3.jpg"
+                    src="/images/avatar/3.jpg"
                     sx={{ 
                             bgcolor: '#DFE2F5',
                             color: '#141414',
@@ -29,6 +29,7 @@ export const AvatarComponent = () => {
             </Tooltip>
             <Menu
                 sx={{ mt: '45px' }}
+                open={ false }
                 id="menu-appbar"
                 // anchorEl={anchorElUser}
                 anchorOrigin={{
