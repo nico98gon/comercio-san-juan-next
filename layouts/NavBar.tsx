@@ -1,3 +1,5 @@
+'use client'
+
 import { AppBar, Box, Fab, styled, Toolbar } from '@mui/material';
 import Container from '@mui/material/Container';
 // import AddIcon from '@mui/icons-material/Add';
@@ -34,7 +36,7 @@ import logoImage from 'assets/img/grapeLogo2.jpg';
 export const NavBar = () => {
 
     return (
-        <>
+        <Box sx={{ display: "flex" }}>
             <AppBar
                 position="fixed"
                 enableColorOnDark
@@ -115,7 +117,7 @@ export const NavBar = () => {
                     </Toolbar>
                 </Container>
             </StyledBarMobile> */}
-        </>
+        </Box>
 
     );
 }
