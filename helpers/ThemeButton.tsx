@@ -1,0 +1,23 @@
+'use client'
+
+import { createContext, useContext } from 'react';
+import { useTheme } from '@mui/material/styles';
+import { IconButton } from '@mui/material';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+
+
+export const ColorModeContext = createContext({ toggleColorMode: () => {} });
+
+export const ThemeButton = () => {
+
+    const theme = useTheme();
+    const colorMode = useContext( ColorModeContext );
+
+    return (
+        <IconButton onClick={ colorMode.toggleColorMode } sx={{ color: '#DFE2F5' }} >
+            {theme.palette.mode === 'dark' ? <Brightness7Icon sx={{ fontSize: 30 }}/> : <Brightness4Icon sx={{ fontSize: 30 }}/>}
+        </IconButton>
+    );
+
+}

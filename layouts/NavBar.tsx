@@ -12,7 +12,7 @@ import Image from 'next/image';
 import logoImage from 'assets/img/grapeLogo2.jpg';
 import Link from 'next/link';
 
-// import { ThemeButton } from "../../helpers";
+import { ThemeButton } from "helpers/ThemeButton";
 
 // const StyledBarMobile = styled(AppBar)({
 //     width: '98%',
@@ -74,7 +74,7 @@ export const NavBar = () => {
                         <Search/>
 
                         <Box sx={{ position: 'relative', right: 7, }} >
-                            {/* <ThemeButton /> */}
+                            <ThemeButton />
                         </Box>
 
                         <Box sx={{ flexGrow: 0 }}>
