@@ -1,3 +1,5 @@
+import { HomeProducts } from "layouts/HomeProducts";
+import { AppTheme } from "theme/AppTheme";
 
 export default function HomePage() {
   return (
@@ -6,6 +8,9 @@ export default function HomePage() {
       <br />
       <br />
       <h1>Home</h1>
-    </>
+      {/* <AppTheme> */}
+        <HomeProducts />
+      {/* </AppTheme> */}
+    </> 
   );
 }
