@@ -28,7 +28,7 @@ export const ProductCard = () => {
     //const imageURL = "../../assets/fondo1.jpg";
 
     return (
-      <Box sx={{ display: 'inline-block', p: 7, alignContent: 'center' }}> 
+      <Box sx={{ display: 'inline-block', p: 3, alignContent: 'center' }}> 
         <Card
           sx={{
             width: { xs: 280, md: 348 },

@@ -13,6 +13,7 @@ import logoImage from 'assets/img/grapeLogo2.jpg';
 import Link from 'next/link';
 
 import { ThemeButton } from "helpers/ThemeButton";
+import { AppTheme } from 'theme/AppTheme';
 
 // const StyledBarMobile = styled(AppBar)({
 //     width: '98%',
@@ -37,90 +38,92 @@ import { ThemeButton } from "helpers/ThemeButton";
 export const NavBar = () => {
 
     return (
-        <Box sx={{ display: "flex" }}>
-            <AppBar
-                position="fixed"
-                enableColorOnDark
-                sx={{ background: "#141414", display: { xs: 'none', md: 'flex', textAlign: 'center' }}}
-            >
-                <Container maxWidth="xl">
-                    <Toolbar disableGutters>
+        <AppTheme>
+            <Box sx={{ display: "flex" }}>
+                <AppBar
+                    position="fixed"
+                    enableColorOnDark
+                    sx={{ background: "#141414", display: { xs: 'none', md: 'flex', textAlign: 'center' }}}
+                >
+                    <Container maxWidth="xl">
+                        <Toolbar disableGutters>
 
-                    <Link href="/">
-                        <Image
-                            src={logoImage}
-                            width={55}
-                            height={55}
-                            alt="Logo Comercio San Juan"
-                        />
-                    </Link>
+                        <Link href="/">
+                            <Image
+                                src={logoImage}
+                                width={55}
+                                height={55}
+                                alt="Logo Comercio San Juan"
+                            />
+                        </Link>
 
-                        <Comercio />
+                            <Comercio />
 
-                        <Box sx={{
-                            // ml: { md: '2%',lg: '15%', xl: '28%' },
-                            position: 'absolute',
-                            top: '50%',
-                            left: '50%',
-                            transform: 'translate( -50%, -50% )',
-                            display: { xs: 'none', md: 'flex' },
-                        }}
-                        >
-                            <PagesButtons />
-                        </Box>
+                            <Box sx={{
+                                // ml: { md: '2%',lg: '15%', xl: '28%' },
+                                position: 'absolute',
+                                top: '50%',
+                                left: '50%',
+                                transform: 'translate( -50%, -50% )',
+                                display: { xs: 'none', md: 'flex' },
+                            }}
+                            >
+                                <PagesButtons />
+                            </Box>
 
-                        <Box sx={{ flexGrow: 1 }} />
+                            <Box sx={{ flexGrow: 1 }} />
 
-                        <Search/>
+                            <Search/>
 
-                        <Box sx={{ position: 'relative', right: 7, }} >
-                            <ThemeButton />
-                        </Box>
+                            <Box sx={{ position: 'relative', right: 7, }} >
+                                <ThemeButton />
+                            </Box>
 
-                        <Box sx={{ flexGrow: 0 }}>
-                            <AvatarComponent />
-                        </Box>
-                    </Toolbar>
-                </Container>
-            </AppBar>
+                            <Box sx={{ flexGrow: 0 }}>
+                                <AvatarComponent />
+                            </Box>
+                        </Toolbar>
+                    </Container>
+                </AppBar>
 
-            {/* <StyledBarMobile 
-                position="fixed"
-                sx={{
-                    display: { xs: 'flex', md: 'none' }
-                }}
-            >
-                <Container>
+                {/* <StyledBarMobile 
+                    position="fixed"
+                    sx={{
+                        display: { xs: 'flex', md: 'none' }
+                    }}
+                    >
+                    <Container>
                     <Toolbar>
-
-                        <Box>
-                            <BurgerMenu />
-                        </Box>
-
-                        <Box sx={{ ml: '14%' }} >
+                    
+                    <Box>
+                    <BurgerMenu />
+                            </Box>
+                            
+                            <Box sx={{ ml: '14%' }} >
                             <ThemeButton />
-                        </Box>
-
-                        <StyledFab aria-label="add" color='secondary'>
+                            </Box>
+                            
+                            <StyledFab aria-label="add" color='secondary'>
                             <AddIcon />
-                        </StyledFab>
+                            </StyledFab>
 
 
-                        <Box sx={{ flexGrow: 1 }} />
+                            <Box sx={{ flexGrow: 1 }} />
 
-                        <Box sx={{ mr: '13%'}} >
-                            <FavoriteIcon />
-                        </Box>
+                            <Box sx={{ mr: '13%'}} >
+                                <FavoriteIcon />
+                                </Box>
 
-
-                        <Box >
-                            <Avatare />
-                        </Box>
-
-                    </Toolbar>
-                </Container>
-            </StyledBarMobile> */}
-        </Box>
+                                
+                                <Box >
+                                <Avatare />
+                                </Box>
+                                
+                                </Toolbar>
+                    </Container>
+                </StyledBarMobile> */}
+            </Box>
+        </AppTheme>
 
     );
 }
