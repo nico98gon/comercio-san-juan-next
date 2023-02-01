@@ -122,8 +122,8 @@ body::-webkit-scrollbar-thumb {
 
 /* From uiverse.io by @Ali-Tahmazi99 BURGER MENU */
 input[type = "checkbox"] {
-  appearance: none;
   -webkit-appearance: none;
+  appearance: none;
   display: none;
   visibility: hidden;
 }

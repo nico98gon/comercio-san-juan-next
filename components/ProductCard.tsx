@@ -48,7 +48,11 @@ export const ProductCard = () => {
           <CardHeader
             avatar={
               <IconButton sx={{ p: 0 }} >
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" sx={{ bgcolor: '#DFE2F5', color: '#141414' }} />
+                <Avatar 
+                  alt="Remy Sharp" 
+                  src="/static/images/avatar/2.jpg" 
+                  sx={{ bgcolor: '#DFE2F5', color: '#141414' }} 
+                />
               </IconButton>
             }
               title="Nombre del producto"
@@ -92,13 +96,13 @@ export const ProductCard = () => {
           <Toolbar disableGutters sx={{ mt: '16px' }} >
 
             <Typography gutterBottom variant="h5" component="div" mt={1}>
-                  $ 1500
+              $ 1500
             </Typography>
 
             <Box sx={{ flexGrow: 1 }} />
 
-            <Fab size='medium' position='relative' sx={{ bgcolor: 'secondary.main', zIndex: '2' }}>
-                  <FavoriteBorder color='primary' sx={{ color: '#141414' }}/>
+            <Fab size='medium' sx={{ bgcolor: 'secondary.main', zIndex: '2' }}>
+              <FavoriteBorder color='primary' sx={{ color: '#141414' }}/>
             </Fab>
           </Toolbar>
 

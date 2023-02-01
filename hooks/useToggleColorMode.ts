@@ -1,12 +1,12 @@
 'use client'
 
+import * as React from 'react';
 import { createTheme } from "@mui/material";
-import { useMemo, useState } from "react";
 
 export const useToggleColorMode = () => {
-    const [mode, setMode] = useState<'light' | 'dark'>('light');
+    const [mode, setMode] = React.useState<'light' | 'dark'>('light');
 
-    const colorMode = useMemo(
+    const colorMode = React.useMemo(
         () => ({
             toggleColorMode: () => {
                 setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
@@ -15,7 +15,7 @@ export const useToggleColorMode = () => {
         [],
     );
 
-    const theme = useMemo(
+    const theme = React.useMemo(
         () =>
             createTheme({
                 palette: {
@@ -23,10 +23,7 @@ export const useToggleColorMode = () => {
                     ...(mode === 'light'
                     ? {
                         primary: { main: '#141414' }, // Negro
-                        divider: { 
-                                    main: '#141414', // Negro
-                                    secondary: '#424242', // Gris oscuro
-                                },
+                        divider:'#141414', // Negro
                                 secondary: { 
                                     main: '#A0D624', // Verde lima
                                     // secondary: '#6624D6', // Violeta 
@@ -46,13 +43,10 @@ export const useToggleColorMode = () => {
                     : {
                         // palette values for dark mode
                         primary: { main: '#141414' }, // Negro
-                        divider: { 
-                                    main: '#DFE2F5', // Blanco
-                                    secondary: '#C9C9C9', // Gris claro
-                                },
+                        divider: '#DFE2F5', // Blanco
                         secondary: { 
                                     main: '#A0D624', // Verde lima
-                                    secondary: '#6624D6', // Violeta 
+                                    // secondary: '#6624D6', // Violeta 
                                 },
                         background: {
                             default: '#424242', // Gris oscuro 
